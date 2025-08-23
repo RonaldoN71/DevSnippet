@@ -9,7 +9,7 @@ const UserContext = React.createContext();
 axios.defaults.withCredentials = true;
 
 export const UserContextProvider = ({ children }) => {
-  const serverUrl = "http://localhost:6001";
+  const serverUrl = "https://devsnippet.onrender.com";
 
   const router = useRouter();
 

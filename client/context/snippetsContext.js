@@ -5,7 +5,7 @@ const SnippetsContext = React.createContext();
 import { useGlobalContext } from "@/context/globalContext";
 
 export const SnippetsProvider =({children}) =>{
-  const serverUrl = "http://localhost:6001/api/v1";
+  const serverUrl = "https://devsnippet.onrender.com/api/v1";
   const [publicSnippets, setPublicSnippets] = useState([]);
   const [userSnippets,setUserSnippets] = useState([]);
   const [tags,setTags] = useState([]);
