@@ -156,7 +156,7 @@ function AddSnippetModal() {
                     name="code"
                     value={code}
                     onChange={(e)=> setCode(e.target.value)}
-                    className="w-full pt-2 h-[400px] px-4 bg-1 text-white rounded-lg"
+                    className="w-full pt-2 h-[300px] px-4 bg-1 text-white rounded-lg"
                     placeholder="// Code here..."
                     >
                     </textarea>
@@ -166,6 +166,7 @@ function AddSnippetModal() {
               <div className="flex flex-wrap gap-4">
                 {tags.map((tag)=>{
                   return <button
+                  key={tag._id} 
                   type="button"
                   className="py-1 text-white text-sm h-[42px] px-4 flex items-center justify-center bg-white rounded-lg font-semibold hover:bg-white/80 transition duration-200 ease-in-out"
                   style={{

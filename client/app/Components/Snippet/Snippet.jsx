@@ -1,5 +1,5 @@
 'use client';
-import {useEffect} from 'react';
+import {useEffect,useState} from 'react';
 import {useSnippetContext} from '@/context/snippetsContext';
 import {
     bookmarkEmpty,
@@ -32,6 +32,18 @@ function Snippet({snippet,height="400px"}) {
       case "CSS" : return "/logos/css.svg";
     }
   }
+  const [copied,setCopied] = useState(false);
+const handleCopy = async () => {
+    if (!codeString) return;
+    try {
+      await navigator.clipboard.writeText(codeString);
+      setCopied(true);
+
+      setTimeout(() => setCopied(false), 3000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
   return (
     <div className="shadow-sm flex flex-col border-2 border-rgba-3 rounded-lg">
      <div className="px-6 py-4 bg-4 flex items-center justify-between rounded-t-lg border-b-2 border-rgba-3 text-white">
@@ -60,9 +72,10 @@ function Snippet({snippet,height="400px"}) {
 
        <div className="flex items-center gap-2 text-gray-200">
             <button className="w-10 h-10 rounded-md text-green-400 text-lg flex items-center justify-center"
-            style={{background:useBtnColorMemo }}
+            style={{background:copied ? "" : useBtnColorMemo,}}
+            onClick={handleCopy}
             >
-                {copy}
+                {copied ? (<span className="text-gray-300 text-sm font-medium">Copied!</span>): copy}
             </button>
             <button className="w-10 h-10 rounded-md text-green-400 text-lg flex items-center justify-center"
             style = {{background: useTagColorMemo}}
