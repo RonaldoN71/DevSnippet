@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react';
 import { useGlobalContext } from "@/context/globalContext";
-import { edit, plus } from "@/utils/Icons";
+import { edit, plus } from "@/utils/icons";
 import {useSnippetContext} from '@/context/snippetsContext';
 function AddSnippetModal() {
   const {closeModal,modalMode,activeSnippet} = useGlobalContext();
