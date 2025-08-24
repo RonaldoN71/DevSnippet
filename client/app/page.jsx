@@ -3,7 +3,7 @@
 import { useSnippetContext } from "@/context/snippetsContext";
 import Snippet from "./Components/Snippet/Snippet";
 import { ISnippet } from "@/types/types";
-import { next, prev } from "@/utils/Icons";
+import { next, prev } from "@/utils/icons";
 import { useEffect, useState } from "react";
 
 export default function Home() {
