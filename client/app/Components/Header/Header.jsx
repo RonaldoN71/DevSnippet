@@ -4,8 +4,8 @@ import Link from "next/link";
 import SearchInput from '../SearchInput/SearchInput';
 import {useUserContext} from "@/context/userContext";
 import { useRouter } from "next/navigation";
-import { login, register } from "@/utils/Icons";
-import SearchIcon from "@/public/Icons/SearchIcon";
+import { login, register } from "@/utils/icons";
+import SearchIcon from "@/public/icons/SearchIcon";
 import {useGlobalContext} from "@/context/globalContext"
 function Header() {
   const {openModalForSnippet,openProfileModal,openModalForSearch} = useGlobalContext();

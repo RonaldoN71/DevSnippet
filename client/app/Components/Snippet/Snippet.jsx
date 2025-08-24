@@ -7,7 +7,7 @@ import {
     heart,
     heartOutline,
     trash,
-} from '@/utils/Icons';
+} from '@/utils/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import {formatDate} from '@/utils/dates';

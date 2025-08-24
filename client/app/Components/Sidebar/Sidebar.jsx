@@ -12,7 +12,7 @@ import {
   help,
   home,
   users,
-} from "@/utils/Icons";
+} from "@/utils/icons";
 import Link from "next/link";
 import {useState} from 'react';
 import { usePathname } from "next/navigation";
